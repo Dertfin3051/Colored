@@ -3,6 +3,8 @@
 **Colored** - a simple Java-library for quickly using ANSI-colors in the console for your Java program.
 
 ## Installation
+
+JitPack Page:
 [![](https://jitpack.io/v/Dertfin3051/Colored.svg)](https://jitpack.io/#Dertfin3051/Colored)
 ### Maven
 To install *Colored* into your Maven project, first add the JitPack repository to your `pom.xml` file:
