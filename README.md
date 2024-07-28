@@ -3,14 +3,13 @@
 **Colored** - a simple Java-library for quickly using ANSI-colors in the console for your Java program.
 
 ## Installation
-
+[![](https://jitpack.io/v/Dertfin3051/Colored.svg)](https://jitpack.io/#Dertfin3051/Colored)
 ### Maven
 To install *Colored* into your Maven project, first add the JitPack repository to your `pom.xml` file:
 ```
 <repositories>
     <repository>
-        <id>jitpack</id>
-        <name>JitPack</name>
+        <id>jitpack.io</id>
         <url>https://jitpack.io</url>
     </repository>
 </repositories>
@@ -19,7 +18,7 @@ Then add *Colored*  to your dependencies, actually in `pom.xml`:
 ```
 <dependencies>
     <dependency>
-      <groupId>io.github.Dertfin3051</groupId>
+      <groupId>com.github.Dertfin3051</groupId>
       <artifactId>Colored</artifactId>
       <version>1.0</version>
     </dependency>
@@ -36,7 +35,7 @@ repositories {
 Then add *Colored*  to your dependencies, actually in `build.gradle`:
 ```
 dependencies {
-    implementation "io.github.Dertfin3051:Colored" version "1.0"
+    implementation "com.github.Dertfin3051:Colored" version "1.0"
 }
 ```
 
@@ -52,7 +51,7 @@ repositories {
 Then add *Colored*  to your dependencies, actually in `build.gradle`:
 ```
 dependencies {
-    implementation("io.github.Dertfin3051:Colored:1.0")
+    implementation("com.github.Dertfin3051:Colored:1.0")
 }
 ```
 
