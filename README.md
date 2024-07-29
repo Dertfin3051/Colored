@@ -20,7 +20,7 @@ Then add *Colored*  to your dependencies, actually in `pom.xml`:
     <dependency>
       <groupId>com.github.Dertfin3051</groupId>
       <artifactId>Colored</artifactId>
-      <version>1.0</version>
+      <version>1.1</version>
     </dependency>
 </dependencies>
 ```
@@ -35,7 +35,7 @@ repositories {
 Then add *Colored*  to your dependencies, actually in `build.gradle`:
 ```
 dependencies {
-    implementation "com.github.Dertfin3051:Colored" version "1.0"
+    implementation "com.github.Dertfin3051:Colored" version "1.1"
 }
 ```
 
@@ -51,7 +51,7 @@ repositories {
 Then add *Colored*  to your dependencies, actually in `build.gradle`:
 ```
 dependencies {
-    implementation("com.github.Dertfin3051:Colored:1.0")
+    implementation("com.github.Dertfin3051:Colored:1.1")
 }
 ```
 
@@ -61,10 +61,28 @@ dependencies {
 System.out.println(Color.RED + "This text is red!");
 ```
 
-**But**, if your line ends, color isn't reset. Just use `Color.RESET`, to reset your color.
+**But**, if line ends, color isn't reset. Just use `Style.RESET`, to reset your color *(and all styles)*.
 ```
 System.out.println(Color.PURPLE + "This text is purple!" + Color.RESET);
 System.out.println("This text has default color");
 ```
+
+Besides the color you can change the text background
+```
+System.out.println("" +
+    Color.RED + Background.PURPLE +
+    "This is red text with purple background :D"
+    + Style.RESET
+);
+```
+
+Since we touched on Style, we can also look at its functions.  
+There are several styles that *Colored* supports:
+- `Style.BOLD`
+- `Style.ITALIC`
+- `Style.UNDERLINE`
+- `Style.RESET` *don't forget about it*
+
+*Now you can find `Style.NONE`. Let his appointment remain a surprise for you until the next update :D*
 
 ## *Good luck!*

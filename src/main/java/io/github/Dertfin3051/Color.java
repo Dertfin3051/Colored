@@ -1,7 +1,16 @@
 package io.github.Dertfin3051;
 
+/**
+ * Enum containing ANSI codes to change the text color <p>
+ * Using: Use one of these values as String.
+ * @since 1.0
+ */
 public enum Color {
-    RESET("\u001B[0m"),
+    /**
+     * @deprecated `Color.RESET` will be deleted. Use `Style.RESET` instead
+     */
+    @Deprecated RESET("\u001B[0m"),
+
     BLACK("\u001B[30m"),
     RED("\u001B[31m"),
     GREEN("\u001B[32m"),
