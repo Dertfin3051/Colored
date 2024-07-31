@@ -83,6 +83,35 @@ There are several styles that *Colored* supports:
 - `Style.UNDERLINE`
 - `Style.RESET` *don't forget about it*
 
-*Now you can find `Style.NONE`. Let his appointment remain a surprise for you until the next update :D*
+### Even easier!
+
+If you need to use multiple styles, then there is an easier way - the `Colored` class. It contains several styles at once and automatically resets them at the end of the line. It's easy to create:
+```
+System.out.println(
+    new Colored("Your text", Color.RED, Background.BLACK, Style.ITALIC)
+);
+```
+
+If you don't need to use one or more parameters, then set them to `NONE`:
+```
+System.out.println(
+    new Colored("Your text", Color.RED, Background.NONE, Style.ITALIC)
+);
+```
+
+You can also stack multiple Coloreds together, but be sure to add an empty `""` at the beginning to avoid errors *(or use `.toString()` for the first one)*
+```
+System.out.println("" +
+    new Colored("text1", Color.RED, Background.RED, Style.ITALIC) +
+    new Colored("text2", Color.PURPLE, Background.NONE, Style.BOLD) +
+    new Colored("text3", Color.NONE, Background.YELLOW, Style.UNDERLINE)
+);
+```
+```
+System.out.println("" +
+    new Colored("Good", Color.YELLOW, Background.PURPLE, Style.ITALIC) +
+    new Colored("luck!", Color.PURPLE, Background.RED, Style.ITALIC) +
+);
+```
 
 ## *Good luck!*

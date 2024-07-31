@@ -13,7 +13,7 @@ public enum Style {
     NONE("") // Instead null in the future :D
     ;
 
-    private String value;
+    private final String value;
 
     Style(String value) {
         this.value = value;

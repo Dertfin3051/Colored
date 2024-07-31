@@ -12,10 +12,11 @@ public enum Background {
     BLUE("\033[44m"),
     PURPLE("\033[45m"),
     CYAN("\033[46m"),
-    WHITE("\033[47m")
+    WHITE("\033[47m"),
+    NONE("")
     ;
 
-    private String value;
+    private final String value;
 
     Background(String value) {
         this.value = value;
