@@ -1,5 +1,7 @@
 package io.github.Dertfin3051;
 
+import java.io.IOException;
+
 public class Colored {
 
     private final String text;
@@ -38,5 +40,23 @@ public class Colored {
     @Override
     public String toString() {
         return styles.toString() + text + Style.RESET;
+    }
+
+    /**
+     * Method for correctly displaying colors on different operating systems. <br>
+     * On Windows OS, programs cannot output ANSI colors,
+     * so this process occurs through calling the "echo" command
+     */
+    public void safePrint() {
+        if (System.getProperty("os.name").toLowerCase().contains("windows")) {
+            Runtime rt = Runtime.getRuntime();
+            try {
+                rt.exec(String.format("echo \"%s\"", this)); // Try to print colored text with "echo"
+            } catch (IOException e) {
+                System.out.println(this.text); // Print non-colored text if "echo" command thrown IOE
+            }
+        } else {
+            System.out.println(this); // Other OS supports program output with ANSI-colors
+        }
     }
 }
